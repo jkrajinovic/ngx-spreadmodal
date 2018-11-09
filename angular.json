@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngx-spreadmodal": {
+      "root": "projects/ngx-spreadmodal",
+      "sourceRoot": "projects/ngx-spreadmodal/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-spreadmodal/tsconfig.lib.json",
+            "project": "projects/ngx-spreadmodal/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-spreadmodal/src/test.ts",
+            "tsConfig": "projects/ngx-spreadmodal/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-spreadmodal/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-spreadmodal/tsconfig.lib.json",
+              "projects/ngx-spreadmodal/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-spreadmodal"

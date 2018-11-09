@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-spreadmodal": [
+        "dist/ngx-spreadmodal"
+      ],
+      "ngx-spreadmodal/*": [
+        "dist/ngx-spreadmodal/*"
+      ]
+    }
   }
 }
