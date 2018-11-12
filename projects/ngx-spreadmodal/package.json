@@ -1,6 +1,7 @@
 {
   "name": "ngx-spreadmodal",
-  "version": "0.3.0",
+  "version": "0.3.1",
+  "license" : "MIT",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
