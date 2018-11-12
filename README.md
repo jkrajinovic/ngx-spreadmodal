@@ -1,27 +1,34 @@
 # NgSpreadmodal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
+## Use it like this
+In your component HTML file
+```
+<ngx-spreadmodal #spread>
+Modal content goes over hear
+</ngx-spreadmodal>
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<button (click)="openModal()">Open Modal</button>
+<button (click)="closeModal()">Open Modal</button>
+```
 
-## Code scaffolding
+In your component class
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+import { Component, ViewChild} from '@angular/core';
+import { NgxSpreadmodalComponent } from 'ngx-spreadmodal';
 
-## Build
+export class AppComponent {
+  
+  @ViewChild('spread') spread:NgxSpreadmodalComponent;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  openModal(){
+    this.spread.openModal();
+  }
 
-## Running unit tests
+  closeModal(){
+    this.spread.closeModal();
+  }
+  }
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
