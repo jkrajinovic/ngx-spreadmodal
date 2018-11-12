@@ -1,5 +1,8 @@
 # NgxSpreadmodal
 
+If in any casy you need a modal
+Wrap your ng stuff in a nicely animated modal that takes up whole screen.
+
 ## Use it like this
 In your component HTML file
 ```
