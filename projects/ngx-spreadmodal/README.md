@@ -1,5 +1,6 @@
 # NgxSpreadmodal
-If you need a modal that takes up whole screen this modal does that.
+If you need a modal that takes up whole screen, this modal does that
+with some neat extra features.
 
 ## Use it like this
 In your component HTML file
@@ -30,6 +31,22 @@ export class AppComponent {
   closeModal(){
     this.spread.closeModal();
   }
+  }
+```
+
+To act upon modal animation completion use promise.
+
+```
+  openModal(){
+    this.spread.openModal().then(() =>{
+      console.log('modal opened');
+    });
+  }
+
+  closeModal(){
+    this.spread.closeModal().then(()=>{
+      console.log('modal closed');
+    });
   }
 ```
 
