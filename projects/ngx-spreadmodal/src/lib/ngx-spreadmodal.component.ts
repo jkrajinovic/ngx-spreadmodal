@@ -16,22 +16,43 @@ export class NgxSpreadmodalComponent {
 
   open: boolean = false;
   showContent: boolean = false;
-  modalOpenAnimationDuration: number = 650;
+
+  spreadAnimateDuration: number = 700;
+  contentAnimateDuration: number = 700;
 
   constructor() { }
 
-  openModal() {
+  openModal(): Promise<any> {
+
     this.open = true;
-    setTimeout(() => {
-      this.showContent = true;
-    }, this.modalOpenAnimationDuration);
+
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        this.showContent = true;
+
+        setTimeout(() => {
+          resolve(this);
+        }, this.contentAnimateDuration);
+
+      }, this.spreadAnimateDuration);
+    });
+
   }
 
   closeModal() {
+    
     this.showContent = false;
-    setTimeout(() => {
-      this.open = false;
-    }, this.modalOpenAnimationDuration);
+
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        this.open = false;
+
+        setTimeout(() => {
+          resolve(this);
+        }, this.spreadAnimateDuration);
+
+      }, this.contentAnimateDuration);
+    });
   }
 
 }
