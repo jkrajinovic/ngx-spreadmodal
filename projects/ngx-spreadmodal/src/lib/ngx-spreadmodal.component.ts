@@ -22,7 +22,7 @@ export class NgxSpreadmodalComponent {
 
   constructor() { }
 
-  openModal(): Promise<any> {
+  openModal(): Promise<NgxSpreadmodalComponent> {
 
     this.open = true;
 
@@ -39,7 +39,7 @@ export class NgxSpreadmodalComponent {
 
   }
 
-  closeModal() {
+  closeModal(): Promise<NgxSpreadmodalComponent> {
     
     this.showContent = false;
 
