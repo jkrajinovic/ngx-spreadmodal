@@ -1,4 +1,4 @@
-# NgSpreadmodal
+# NgxSpreadmodal
 
 ## Use it like this
 In your component HTML file
