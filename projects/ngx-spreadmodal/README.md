@@ -9,7 +9,7 @@ Modal content goes over hear
 
 
 <button (click)="openModal()">Open Modal</button>
-<button (click)="closeModal()">Open Modal</button>
+<button (click)="closeModal()">Close Modal</button>
 ```
 
 In your component class
