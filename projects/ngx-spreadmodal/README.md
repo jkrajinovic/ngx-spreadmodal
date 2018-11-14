@@ -2,6 +2,8 @@
 If you need a modal that takes up whole screen, this modal does that
 with some neat extra features.
 
+[DEMO](https://jkrajinovic.github.io/ngx-spreadmodal/docs/)
+
 ## Use it like this
 In your component HTML file
 ```
