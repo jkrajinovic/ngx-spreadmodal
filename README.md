@@ -6,7 +6,7 @@ with some neat extra features.
 In your component HTML file
 ```
 <ngx-spreadmodal #spread>
-Modal content goes over hear
+Modal content goes here
 </ngx-spreadmodal>
 
 
