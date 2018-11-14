@@ -5,7 +5,15 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getModalLounchButton() {
+    return element(by.css('.open-modal'))
+  }
+
+  getModalCancelButton() {
+    return element(by.css('.cancel-button'))
+  }
+
+  getModal() {
+    return element(by.css('.spread-modal'));
   }
 }
