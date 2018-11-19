@@ -25,7 +25,10 @@ before_script:
 
 script:
   - ng lint
-
+  - ng test ng-spreadmodal --watch=false
+  - ng test ngx-spreadmodal --watch=false
+  - ng e2e
+  - ng build --prod
 
 # after_success:
 #  - firebase deploy --token $FIREBASE_TOKEN
