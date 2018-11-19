@@ -28,7 +28,7 @@ script:
   - ng test --watch=false
   - ng build --prod
 
-after_success:
+# after_success:
 #  - firebase deploy --token $FIREBASE_TOKEN
 
 notifications:
