@@ -2,6 +2,8 @@
 If you need a modal that takes up whole screen, this modal does that
 with some neat extra features.
 
+[![Build Status](https://travis-ci.org/jkrajinovic/ngx-spreadmodal.svg?branch=master)](https://travis-ci.org/jkrajinovic/ngx-spreadmodal)
+
 [DEMO](https://jkrajinovic.github.io/ngx-spreadmodal/docs/)
 
 ## Use it like this
