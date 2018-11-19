@@ -27,7 +27,7 @@ describe('workspace-project App', () => {
   it('modal should correctly close', () => {
     page.getModalCancelButton().click();
     browser.sleep(1500);
-    
+
     page.getModal().getSize().then((elSize) => {
       browser.manage().window().getSize().then((size) => {
         expect(elSize.width).toBe(0);

@@ -1,4 +1,4 @@
-import { Component, ViewChild} from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgxSpreadmodalComponent } from './../../projects/ngx-spreadmodal/src/lib/ngx-spreadmodal.component';
 // import { NgxSpreadmodalComponent } from 'ngx-spreadmodal';
 
@@ -10,29 +10,29 @@ import { NgxSpreadmodalComponent } from './../../projects/ngx-spreadmodal/src/li
 })
 export class AppComponent {
   title = 'ng-spreadmodal';
-  @ViewChild('spread') spread:NgxSpreadmodalComponent;
+  @ViewChild('spread') spread: NgxSpreadmodalComponent;
 
 
-  openDialog(){
+  openDialog() {
     console.log('opening modal');
-    this.spread.openModal().then(() =>{
+    this.spread.openModal().then(() => {
       console.log('opened');
-      
+
     });
   }
 
-  submitForm(){
+  submitForm() {
     console.log('closing modal with submit');
-    this.spread.closeModal().then(() =>{
+    this.spread.closeModal().then(() => {
       console.log('closed');
     });
   }
 
-  cancel(){
+  cancel() {
     console.log('closing modal with cancel');
-    this.spread.closeModal().then(() =>{
+    this.spread.closeModal().then(() => {
       console.log('closed');
     });
   }
-  
+
 }
