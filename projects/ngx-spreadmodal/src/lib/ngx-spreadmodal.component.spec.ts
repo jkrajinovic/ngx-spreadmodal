@@ -13,14 +13,14 @@ describe('NgxSpreadmodalComponent', () => {
       showContent: false,
       spreadAnimateDuration: 700,
       contentAnimateDuration: 700
-    }
+    };
   }));
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgxSpreadmodalComponent ]
+      declarations: [NgxSpreadmodalComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -36,7 +36,7 @@ describe('NgxSpreadmodalComponent', () => {
   it('expect initialProperties with values to be defined', () => {
     expect(component).toEqual(jasmine.objectContaining(initialProperties));
   });
-  
+
   it('#openModal() should set #open and #showContent to true', (done) => {
     component.openModal().then(() => {
       expect(component.open).toBe(true);

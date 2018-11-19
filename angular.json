@@ -109,7 +109,7 @@
     "ng-spreadmodal-e2e": {
       "root": "e2e/",
       "projectType": "application",
-      "prefix": "",
+      "prefix": "ngx",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
@@ -138,7 +138,7 @@
       "root": "projects/ngx-spreadmodal",
       "sourceRoot": "projects/ngx-spreadmodal/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

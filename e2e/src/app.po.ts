@@ -6,11 +6,11 @@ export class AppPage {
   }
 
   getModalLounchButton() {
-    return element(by.css('.open-modal'))
+    return element(by.css('.open-modal'));
   }
 
   getModalCancelButton() {
-    return element(by.css('.cancel-button'))
+    return element(by.css('.cancel-button'));
   }
 
   getModal() {
