@@ -1,23 +1,22 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgxSpreadmodalComponent } from './../../projects/ngx-spreadmodal/src/lib/ngx-spreadmodal.component';
-// import { NgxSpreadmodalComponent } from 'ngx-spreadmodal';
-
+import { RouterOutlet } from '@angular/router';
+import { NgxSpreadmodalComponent } from '../../../ngx-spreadmodal/src/public-api';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [NgxSpreadmodalComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'ng-spreadmodal';
-  @ViewChild('spread') spread: NgxSpreadmodalComponent;
-
+  @ViewChild('spread') spread!: NgxSpreadmodalComponent;
 
   openDialog() {
     console.log('opening modal');
     this.spread.openModal().then(() => {
       console.log('opened');
-
     });
   }
 
@@ -34,5 +33,4 @@ export class AppComponent {
       console.log('closed');
     });
   }
-
 }

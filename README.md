@@ -1,56 +1,27 @@
 # NgxSpreadmodal
-If you need a modal that takes up whole screen, this modal does that
-with some neat extra features.
 
-[![Build Status](https://travis-ci.org/jkrajinovic/ngx-spreadmodal.svg?branch=master)](https://travis-ci.org/jkrajinovic/ngx-spreadmodal)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
 
-[DEMO](https://jkrajinovic.github.io/ngx-spreadmodal/docs/)
+## Development server
 
-## Use it like this
-In your component HTML file
-```
-<ngx-spreadmodal #spread>
-Modal content goes here
-</ngx-spreadmodal>
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-<button (click)="openModal()">Open Modal</button>
-<button (click)="closeModal()">Close Modal</button>
-```
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-In your component class
+## Build
 
-```
-import { Component, ViewChild} from '@angular/core';
-import { NgxSpreadmodalComponent } from 'ngx-spreadmodal';
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-export class AppComponent {
-  
-  @ViewChild('spread') spread:NgxSpreadmodalComponent;
+## Running unit tests
 
-  openModal(){
-    this.spread.openModal();
-  }
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-  closeModal(){
-    this.spread.closeModal();
-  }
-  }
-```
+## Running end-to-end tests
 
-To act upon modal animation completion use promise.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-```
-  openModal(){
-    this.spread.openModal().then(() =>{
-      console.log('modal opened');
-    });
-  }
+## Further help
 
-  closeModal(){
-    this.spread.closeModal().then(()=>{
-      console.log('modal closed');
-    });
-  }
-```
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
