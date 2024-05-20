@@ -1,10 +1,5 @@
-@import "~bootstrap/dist/css/bootstrap.css";
-@import "~font-awesome/css/font-awesome.css";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-/deep/
-body{
-  font-family: 'Open Sans', 'sans-serif';
+::ng-deep body {
+  font-family: "Open Sans", "sans-serif";
   font-size: 16px;
 }
 
@@ -16,9 +11,8 @@ body{
 .two-gunman .gunman {
   padding: 20px;
   flex-basis: 49%;
-  flex-grow:0;
-  flex-shrink:0;
-
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .submit-button {
