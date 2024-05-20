@@ -1,24 +1,56 @@
 # NgxSpreadmodal
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+If you need a modal that takes up whole screen, this modal does that
+with some neat extra features.
 
-## Code scaffolding
 
-Run `ng generate component component-name --project ngx-spreadmodal` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-spreadmodal`.
-> Note: Don't forget to add `--project ngx-spreadmodal` or else it will be added to the default project in your `angular.json` file. 
+[DEMO](https://jkrajinovic.github.io/ngx-spreadmodal/docs/)
 
-## Build
+## Use it like this
+In your component HTML file
+```
+<ngx-spreadmodal #spread>
+Modal content goes here
+</ngx-spreadmodal>
 
-Run `ng build ngx-spreadmodal` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+<button (click)="openModal()">Open Modal</button>
+<button (click)="closeModal()">Close Modal</button>
+```
 
-After building your library with `ng build ngx-spreadmodal`, go to the dist folder `cd dist/ngx-spreadmodal` and run `npm publish`.
+In your component class
 
-## Running unit tests
+```
+import { Component, ViewChild} from '@angular/core';
+import { NgxSpreadmodalComponent } from 'ngx-spreadmodal';
 
-Run `ng test ngx-spreadmodal` to execute the unit tests via [Karma](https://karma-runner.github.io).
+export class AppComponent {
+  
+  @ViewChild('spread') spread:NgxSpreadmodalComponent;
 
-## Further help
+  openModal(){
+    this.spread.openModal();
+  }
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  closeModal(){
+    this.spread.closeModal();
+  }
+  }
+```
+
+To act upon modal animation completion use promise.
+
+```
+  openModal(){
+    this.spread.openModal().then(() =>{
+      console.log('modal opened');
+    });
+  }
+
+  closeModal(){
+    this.spread.closeModal().then(()=>{
+      console.log('modal closed');
+    });
+  }
+```
+
